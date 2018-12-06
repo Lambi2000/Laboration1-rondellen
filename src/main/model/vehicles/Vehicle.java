@@ -1,7 +1,4 @@
-package main.vehicles;
-
-import main.Direction;
-import main.IMoveable;
+package main.model.vehicles;
 
 import java.awt.*;
 

@@ -1,6 +1,6 @@
-package main.vehicles.cars;
+package main.model.vehicles.cars;
 
-import main.vehicles.Vehicle;
+import main.model.vehicles.Vehicle;
 
 import java.awt.*;
 

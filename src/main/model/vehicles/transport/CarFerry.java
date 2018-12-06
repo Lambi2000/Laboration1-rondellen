@@ -1,8 +1,8 @@
-package main.vehicles.transport;
+package main.model.vehicles.transport;
 
-import main.Perpendicular;
-import main.vehicles.Vehicle;
-import main.vehicles.flatbeds.Ramp;
+import main.model.vehicles.Perpendicular;
+import main.model.vehicles.Vehicle;
+import main.model.vehicles.flatbeds.Ramp;
 
 public class CarFerry extends Vehicle {
 

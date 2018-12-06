@@ -1,5 +1,5 @@
-package main.vehicles.cars;
-import main.Perpendicular;
+package main.model.vehicles.cars;
+import main.model.vehicles.Perpendicular;
 
 import java.awt.*;
 

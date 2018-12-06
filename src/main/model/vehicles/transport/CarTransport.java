@@ -1,7 +1,7 @@
-package main.vehicles.transport;
+package main.model.vehicles.transport;
 
-import main.vehicles.flatbeds.Ramp;
-import main.vehicles.cars.Car;
+import main.model.vehicles.flatbeds.Ramp;
+import main.model.vehicles.cars.Car;
 
 import java.awt.*;
 

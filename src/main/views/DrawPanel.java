@@ -1,9 +1,6 @@
-package main;
+package main.views;
 
-import main.vehicles.cars.Car;
-import main.vehicles.cars.Saab95;
-import main.vehicles.cars.Volvo240;
-import main.vehicles.transport.Scania;
+import main.model.vehicles.cars.Car;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

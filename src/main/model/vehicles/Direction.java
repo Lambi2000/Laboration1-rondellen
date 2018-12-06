@@ -1,4 +1,4 @@
-package main;
+package main.model.vehicles;
 
 import java.awt.Point;
 

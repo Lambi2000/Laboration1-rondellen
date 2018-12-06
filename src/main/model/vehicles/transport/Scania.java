@@ -1,8 +1,8 @@
-package main.vehicles.transport;
+package main.model.vehicles.transport;
 
-import main.vehicles.flatbeds.Flatbed;
-import main.Perpendicular;
-import main.vehicles.cars.Car;
+import main.model.vehicles.flatbeds.Flatbed;
+import main.model.vehicles.Perpendicular;
+import main.model.vehicles.cars.Car;
 
 import java.awt.*;
 
