@@ -1,6 +1,6 @@
 package test;
 
-import main.vehicles.transport.CarFerry;
+import main.model.vehicles.transport.CarFerry;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

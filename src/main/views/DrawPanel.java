@@ -22,7 +22,7 @@ public class DrawPanel extends JPanel {
     public DrawPanel(int x, int y, ArrayList<Car> cars) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
-        this.setBackground(Color.green);
+        this.setBackground(Color.white);
         this.cars = cars;
         // Print an error message in case file is not found with a try/catch block
 
@@ -54,34 +54,13 @@ public class DrawPanel extends JPanel {
     private static OSType detectedOS;
 
     public BufferedImage getImage(Car car){
-        String path = "";
-        try {
-            switch (getOperatingSystemType()) {
-                case Windows:
-                    path = "Laboration1\\src\\pics\\" + car.getClass().getSimpleName() + ".jpg";
-                    break;
-                case Linux:
-                case MacOS:
-                    path = "src/pics/" + car.getClass().getSimpleName() + ".jpg";
-                    break;
-            }
-            return ImageIO.read(new File(path));
-        }catch (IOException e){
-            System.out.println("Image not found");
-            return null;
-        }
-    }
+            String path = "";
+            try {
+                return ImageIO.read(new File("src" + File.separator + "pics" + File.separator + car.getClass().getSimpleName() + ".jpg"));
+            }catch (Exception e){
 
-    private OSType getOperatingSystemType() {
-        if (detectedOS == null) {
-            String OS = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH);
-            if ((OS.indexOf("mac") >= 0) || (OS.indexOf("darwin") >= 0)) {
-                detectedOS = OSType.MacOS;
-            } else if (OS.indexOf("win") >= 0) {
-                detectedOS = OSType.Windows;
-            } else
-                detectedOS = OSType.Linux;
-        }
-        return detectedOS;
+            }
+            return null;
+
     }
 }

@@ -1,7 +1,7 @@
 package main.controllers;
 
-import main.vehicles.cars.*;
-import main.vehicles.transport.Scania;
+import main.model.vehicles.cars.*;
+import main.model.vehicles.transport.Scania;
 import main.views.CarView;
 
 import javax.swing.*;

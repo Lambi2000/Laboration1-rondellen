@@ -1,6 +1,6 @@
 package test;
 
-import main.vehicles.cars.Saab95;
+import main.model.vehicles.cars.Saab95;
 import org.junit.Test;
 
 import java.awt.*;

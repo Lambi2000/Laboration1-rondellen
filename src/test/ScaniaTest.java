@@ -1,6 +1,6 @@
 package test;
 
-import main.vehicles.transport.Scania;
+import main.model.vehicles.transport.Scania;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

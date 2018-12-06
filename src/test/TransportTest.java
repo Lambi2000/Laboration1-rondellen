@@ -1,8 +1,8 @@
 package test;
 
-import main.vehicles.transport.CarFerry;
+import main.model.vehicles.transport.CarFerry;
 import org.junit.Test;
-import main.vehicles.cars.*;
+import main.model.vehicles.cars.*;
 
 import static org.junit.Assert.*;
 
