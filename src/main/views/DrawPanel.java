@@ -44,15 +44,6 @@ public class DrawPanel extends JPanel {
         });
     }
 
-
-    public static enum OSType {
-        Windows, MacOS, Linux;
-    }
-
-
-
-    private static OSType detectedOS;
-
     public BufferedImage getImage(Car car){
             String path = "";
             try {
