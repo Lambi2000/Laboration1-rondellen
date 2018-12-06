@@ -1,5 +1,6 @@
 package main.controllers;
 
+import main.model.vehicles.CarFactory;
 import main.model.vehicles.cars.*;
 import main.model.vehicles.transport.Scania;
 import main.views.CarView;
@@ -36,13 +37,13 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.cars.add(new Volvo240());
+        cc.cars.add(CarFactory.createVolvo240());
 
-        Saab95 saab = new Saab95();
+        Car saab = CarFactory.createSaab95();
         saab.point.setLocation(0,100);
         cc.cars.add(saab);
 
-        Scania scania = new Scania();
+        Car scania = CarFactory.createScania();
         scania.point.setLocation(0,200);
         cc.cars.add(scania);
 
