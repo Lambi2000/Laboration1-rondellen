@@ -13,11 +13,11 @@ public class VehicleApplication {
 
     //DrawPanel drawPanel = new DrawPanel(X, Y-240, cc.getCars());
 
-    CarController cc = new CarController();
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         // Instance of this class
 
+        CarController cc = new CarController();
 
         cc.createVehicle("Volvo240");
         cc.createVehicle("Saab95");
