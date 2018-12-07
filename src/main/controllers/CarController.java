@@ -30,6 +30,7 @@ public class CarController {
     CarView frame;
     // A list of cars, modify if needed
     ArrayList<Car> cars = new ArrayList<>();
+    CarFactory carFactory = new CarFactory();
 
     public CarController(){
 
@@ -72,6 +73,17 @@ public class CarController {
                 frame.getDrawPanel().repaint();
             }
         }
+    }
+
+    public void createVehicle(String string){
+        if(string == "Volvo240")
+            carFactory.createVolvo240();
+        else if(string == "Saab95")
+            carFactory.createSaab95();
+        else if(string == "Scania")
+            carFactory.createScania();
+        else
+            System.out.println("Please enter a valid model name.");
     }
 
     private void changeDirection(Car c){
