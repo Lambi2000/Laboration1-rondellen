@@ -3,12 +3,15 @@ package main;
 import main.controllers.CarController;
 import main.model.vehicles.CarFactory;
 import main.model.vehicles.cars.Car;
+import main.model.vehicles.cars.Volvo240;
 import main.views.CarView;
+import main.views.DrawPanel;
 
 public class VehicleApplication {
 
     CarView frame;
 
+    //DrawPanel drawPanel = new DrawPanel(X, Y-240, cc.getCars());
 
     CarController cc = new CarController();
 
@@ -16,21 +19,25 @@ public class VehicleApplication {
         // Instance of this class
 
 
-        cc.cars.add(CarFactory.createVolvo240());
+        cc.createVehicle("Volvo240");
+        cc.createVehicle("Saab95");
+        cc.createVehicle("Scania");
 
-        Car saab = CarFactory.createSaab95();
-        saab.point.setLocation(0,100);
-        cc.cars.add(saab);
-
-        Car scania = CarFactory.createScania();
-        scania.point.setLocation(0,200);
-        cc.cars.add(scania);
+        //cc.getCars().add(CarFactory.createVolvo240());
+        //
+        //Car saab = CarFactory.createSaab95();
+        //saab.point.setLocation(0,100);
+        //cc.getCars().add(saab);
+        //
+        //Car scania = CarFactory.createScania();
+        //scania.point.setLocation(0,200);
+        //cc.getCars().add(scania);
 
         // Start a new view and send a reference of self
         this.frame = new CarView("CarSim 1.0", cc);
 
         // Start the timer
-        cc.timer.start();
+        // TODO cc.startTimer();
     }
 
 
