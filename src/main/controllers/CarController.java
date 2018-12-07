@@ -38,6 +38,10 @@ public class CarController {
 
     }
 
+    public void startTimer() {
+        timer.start();
+    }
+
     //methods:
 
    /* public static void main(String[] args) {

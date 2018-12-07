@@ -29,7 +29,7 @@ public class VehicleApplication {
         cc.frame = new CarView("CarSim 1.0", cc);
 
         // Start the timer
-        // TODO cc.startTimer();
+        cc.startTimer();
     }
 
 
