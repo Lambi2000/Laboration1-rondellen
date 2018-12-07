@@ -16,9 +16,7 @@ public class VehicleApplication {
 
     public static void main(String[] args) {
         // Instance of this class
-
-        CarView frame;
-
+        
         CarController cc = new CarController();
 
         cc.createVehicle("Volvo240");
