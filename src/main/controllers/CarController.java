@@ -29,9 +29,9 @@ public class CarController {
 
     Point newCarLocation = new Point();
     // The frame that represents this instance View of the MVC pattern
-    CarView frame;
+    public CarView frame;
     // A list of cars, modify if needed
-    ArrayList<Car> cars = new ArrayList<>();
+    //ArrayList<Car> cars = new ArrayList<>();
     CarFactory carFactory = new CarFactory();
 
     public CarController(){
@@ -66,7 +66,7 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Car car : cars) {
+            for (Car car : carFactory.getListOfCars()) {
                 car.move();
                 if (calculateIfOutOfBounds(car)) {
                     changeDirection(car);
@@ -75,6 +75,10 @@ public class CarController {
                 frame.getDrawPanel().repaint();
             }
         }
+    }
+
+    public ArrayList<Car> getCars(){
+        return carFactory.getListOfCars();
     }
 
     public void createVehicle(String string){
@@ -105,7 +109,7 @@ public class CarController {
     // Calls the gas method for each car once
     public void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Car car : cars
+        for (Car car : carFactory.getListOfCars()
                 ) {
             car.gas(gas);
         }
@@ -113,30 +117,27 @@ public class CarController {
 
     public void brake(int amount){
         double brake = (double) amount / 100;
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             car.brake(brake);
         }
     }
 
     public void startCars(){
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             car.startEngine();
         }
     }
 
     public void stopCars(){
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             car.stopEngine();
         }
     }
 
-    public ArrayList<Car> getCars(){
-        return cars;
-    }
     
     public void setTurboOn(){
         Saab95 saab;
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             if (car.getClass() == new Saab95().getClass()){
                 saab = (Saab95)car;
                 saab.turboOn = true;
@@ -145,7 +146,7 @@ public class CarController {
     }
     public void setTurboOff(){
         Saab95 saab;
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             if (car.getClass() == new Saab95().getClass()){
                 saab = (Saab95)car;
                 saab.turboOn = false;
@@ -154,7 +155,7 @@ public class CarController {
     }
     public void liftBeds(){
         Scania scania;
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             if (car.getClass() == new Scania().getClass()){
                 scania = (Scania)car;
                 scania.tipFlatbed(70);
@@ -164,7 +165,7 @@ public class CarController {
 
     public void lowerBeds(){
         Scania scania;
-        for (Car car : cars){
+        for (Car car : carFactory.getListOfCars()){
             if (car.getClass() == new Scania().getClass()){
                 scania = (Scania)car;
                 scania.tipFlatbed(0);

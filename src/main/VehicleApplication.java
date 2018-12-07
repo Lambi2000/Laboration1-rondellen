@@ -9,7 +9,7 @@ import main.views.DrawPanel;
 
 public class VehicleApplication {
 
-    CarView frame;
+
 
     //DrawPanel drawPanel = new DrawPanel(X, Y-240, cc.getCars());
 
@@ -17,24 +17,16 @@ public class VehicleApplication {
     public static void main(String[] args) {
         // Instance of this class
 
+        CarView frame;
+
         CarController cc = new CarController();
 
         cc.createVehicle("Volvo240");
         cc.createVehicle("Saab95");
         cc.createVehicle("Scania");
 
-        //cc.getCars().add(CarFactory.createVolvo240());
-        //
-        //Car saab = CarFactory.createSaab95();
-        //saab.point.setLocation(0,100);
-        //cc.getCars().add(saab);
-        //
-        //Car scania = CarFactory.createScania();
-        //scania.point.setLocation(0,200);
-        //cc.getCars().add(scania);
-
         // Start a new view and send a reference of self
-        this.frame = new CarView("CarSim 1.0", cc);
+        cc.frame = new CarView("CarSim 1.0", cc);
 
         // Start the timer
         // TODO cc.startTimer();

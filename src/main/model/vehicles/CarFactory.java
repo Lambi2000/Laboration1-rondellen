@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CarFactory {
 
-    static List<Car> listOfCars = new ArrayList<>();
+    static ArrayList<Car> listOfCars = new ArrayList<>();
 
     public static void createVolvo240(Point point){
         Volvo240 volvo = new Volvo240();
@@ -29,6 +29,10 @@ public class CarFactory {
         Scania scania = new Scania();
         scania.point.setLocation(point);
         listOfCars.add(scania);
+    }
+
+    public static ArrayList<Car> getListOfCars() {
+        return listOfCars;
     }
 }
 
