@@ -31,6 +31,10 @@ public class CarController {
     // A list of cars, modify if needed
     ArrayList<Car> cars = new ArrayList<>();
 
+    public CarController(){
+
+    }
+
     //methods:
 
     public static void main(String[] args) {
