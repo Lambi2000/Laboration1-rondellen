@@ -6,6 +6,7 @@ import main.model.vehicles.transport.Scania;
 import main.views.CarView;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class CarController {
     // each step between delays.
     private Timer timer = new Timer(delay, new TimerListener());
 
+    Point newCarLocation = new Point();
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
@@ -38,7 +40,7 @@ public class CarController {
 
     //methods:
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
 
@@ -57,7 +59,7 @@ public class CarController {
 
         // Start the timer
         cc.timer.start();
-    }
+    }*/
 
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
@@ -77,13 +79,14 @@ public class CarController {
 
     public void createVehicle(String string){
         if(string == "Volvo240")
-            carFactory.createVolvo240();
+            carFactory.createVolvo240(newCarLocation);
         else if(string == "Saab95")
-            carFactory.createSaab95();
+            carFactory.createSaab95(newCarLocation);
         else if(string == "Scania")
-            carFactory.createScania();
+            carFactory.createScania(newCarLocation);
         else
             System.out.println("Please enter a valid model name.");
+        newCarLocation.y = newCarLocation.y + 100;
     }
 
     private void changeDirection(Car c){
